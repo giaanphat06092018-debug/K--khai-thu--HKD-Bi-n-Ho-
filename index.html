@@ -1,0 +1,213 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Dịch vụ kê khai thuế hộ kinh doanh Biên Hòa</title>
+<meta name="description" content="Nhận làm thông báo doanh thu, khai thuế theo quý, cài hóa đơn điện tử cho hộ kinh doanh tại Biên Hòa. Liên hệ Phạm Quang Vinh – ĐT/Zalo 0356 175 200.">
+<meta property="og:title" content="Dịch vụ kê khai thuế hộ kinh doanh Biên Hòa">
+<meta property="og:description" content="Nhận làm thông báo doanh thu, khai thuế theo quý, cài hóa đơn điện tử. Liên hệ Phạm Quang Vinh – ĐT/Zalo 0356 175 200.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: tờ giới thiệu cho chủ hộ kinh doanh — chữ to, ít chữ; thước doanh thu 0–3 tỷ cho biết nghĩa vụ của mình, rồi các gói và cách liên hệ. */
+:root{
+  --bg:#F5F6F2; --card:#FFFFFF; --ink:#16231E; --muted:#56635D; --line:#DDE3DD;
+  --brand:#155E4B;       /* xanh đậm, tin cậy */
+  --brand-soft:#DDEFE8;
+  --mark:#B4540A;        /* mốc 1 tỷ, hạn nộp */
+  --mark-soft:#FBEBDB;
+  --f-body:"Be Vietnam Pro","Segoe UI",system-ui,sans-serif;
+  --f-num:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111815; --card:#18211D; --ink:#E9EFEB; --muted:#A4B1AA; --line:#2A3530;
+  --brand:#5CC9A9; --brand-soft:#173A31; --mark:#F3A45B; --mark-soft:#3A2614; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111815; --card:#18211D; --ink:#E9EFEB; --muted:#A4B1AA; --line:#2A3530;
+  --brand:#5CC9A9; --brand-soft:#173A31; --mark:#F3A45B; --mark-soft:#3A2614; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:36px}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance;line-height:1.15;font-weight:800;letter-spacing:-.02em}
+a{color:var(--brand)}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.fill{border:1.5px dashed var(--mark);color:var(--mark);border-radius:4px;padding:0 6px}
+
+.hero{display:flex;flex-direction:column;gap:14px}
+.area{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--brand)}
+.hero h1{font-size:clamp(34px,7vw,62px)}
+.hero p{max-width:56ch;color:var(--muted);font-size:18px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--brand);background:var(--brand);color:var(--card);border-radius:8px;padding:11px 18px;font-weight:600;text-decoration:none;font-size:16px}
+.btn.ghost{background:transparent;color:var(--brand)}
+.who{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:15px}
+.who b{font-size:17px}
+.who .ph{font-family:var(--f-num);font-size:19px;color:var(--brand);user-select:all}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--card);border-top:1px solid var(--line);display:none;gap:10px;justify-content:center;align-items:center;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.dock .ph{font-family:var(--f-num);font-size:17px}
+@media (max-width:700px){.dock{display:flex}.wrap{padding-bottom:110px!important}}
+
+/* kiểm tra nhanh */
+.check{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:16px}
+.check h2,.sec h2{font-size:clamp(24px,4.4vw,34px)}
+.check label{font-weight:600}
+.slider{display:flex;flex-direction:column;gap:8px}
+.slider input{width:100%;accent-color:var(--brand)}
+.ticks{position:relative;height:20px;font-size:12.5px;color:var(--muted)}
+.ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.ticks span:first-child{transform:none}.ticks span:last-child{transform:translateX(-100%)}
+.ticks .one{color:var(--mark);font-weight:600}
+.readout{font-size:15px;color:var(--muted)}
+.readout b{font-family:var(--f-num);font-size:28px;color:var(--ink);font-weight:500}
+.result{border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.result.ok{background:var(--brand-soft)}
+.result.due{background:var(--mark-soft)}
+.result h3{font-size:20px}
+.result ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:16px}
+.small{font-size:13.5px;color:var(--muted)}
+
+/* gói dịch vụ */
+.sec{display:flex;flex-direction:column;gap:16px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:14px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.plan .for{font-size:13px;font-weight:600;color:var(--brand)}
+.plan h3{font-size:21px}
+.plan ul{margin:0;padding-left:20px;font-size:15.5px;display:flex;flex-direction:column;gap:3px}
+.plan .price{margin-top:auto;border-top:1px dashed var(--line);padding-top:10px;font-size:15px;color:var(--muted)}
+.plan .price b{color:var(--ink);font-family:var(--f-num);font-weight:500;font-size:18px}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:6px;min-width:0}
+.steps li::before{content:counter(s);font-family:var(--f-num);font-size:15px;color:var(--brand);border:1.5px solid var(--brand);border-radius:50%;width:32px;height:32px;display:grid;place-items:center}
+.steps b{font-size:17px}
+.steps p{font-size:15px;color:var(--muted)}
+
+.faq{display:flex;flex-direction:column;gap:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:8px;font-size:15.5px;color:var(--muted)}
+
+.contact{background:var(--brand);color:var(--card);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.contact h2{font-size:clamp(24px,4.4vw,34px)}
+.contact .rows{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}
+.contact .row{background:rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.contact .row span{font-size:13px;opacity:.85}
+.contact .row b{font-family:var(--f-num);font-weight:500;font-size:22px;user-select:all;word-break:break-word}
+.contact .row button{align-self:flex-start;border:1px solid currentColor;background:transparent;border-radius:6px;padding:4px 12px;font-size:14px;color:inherit}
+.contact .fill{border-color:currentColor;color:inherit}
+.contact p{font-size:15px;opacity:.9}
+.foot{font-size:13px;color:var(--muted);max-width:75ch;display:flex;flex-direction:column;gap:6px}
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="area" id="areaLine"></div>
+    <h1>Kê khai thuế cho hộ kinh doanh, gọn trong một cuộc gọi</h1>
+    <p>Từ năm 2026 không còn thuế khoán, hộ kinh doanh tự thông báo hoặc tự khai doanh thu. Ngưỡng không phải nộp thuế GTGT, TNCN nay là <b>1 tỷ đồng/năm</b>. Tôi nhận làm thay phần giấy tờ: theo dõi doanh thu, thông báo doanh thu cuối năm, khai thuế theo quý và cài hóa đơn điện tử khi cần.</p>
+    <div class="cta">
+      <a class="btn" href="#lienhe">Liên hệ tư vấn</a>
+      <a class="btn ghost" href="#kiemtra">Kiểm tra nghĩa vụ của tôi</a>
+    </div>
+    <div class="who"><span>Người phụ trách: <b>Phạm Quang Vinh</b></span><span>ĐT/Zalo: <span class="ph">0356 175 200</span></span><a href="https://zalo.me/0356175200" target="_blank" rel="noopener">Nhắn Zalo →</a></div>
+  </header>
+
+  <section class="check" id="kiemtra" aria-labelledby="checkTitle">
+    <h2 id="checkTitle">Doanh thu năm của bạn khoảng bao nhiêu?</h2>
+    <div class="slider">
+      <label for="rev">Kéo để chọn doanh thu cả năm (tổng tiền bán được, chưa trừ chi phí)</label>
+      <input type="range" id="rev" min="0" max="3000" step="50" value="600">
+      <div class="ticks" aria-hidden="true"><span style="left:0">0</span><span class="one" style="left:33.33%">1 tỷ</span><span style="left:66.66%">2 tỷ</span><span style="left:100%">3 tỷ</span></div>
+      <div class="readout" id="readout"></div>
+    </div>
+    <div class="result" id="result" aria-live="polite"></div>
+    <p class="small">Đây là thông tin chung theo Nghị định 68/2026/NĐ-CP và Nghị định 141/2026/NĐ-CP. Mỗi ngành nghề có tỷ lệ tính thuế riêng; hãy liên hệ để được xem cụ thể cho trường hợp của bạn.</p>
+  </section>
+
+  <section class="sec" aria-labelledby="plansTitle">
+    <h2 id="plansTitle">Các gói dịch vụ</h2>
+    <div class="plans" id="plans"></div>
+  </section>
+
+  <section class="sec" aria-labelledby="stepsTitle">
+    <h2 id="stepsTitle">Làm việc như thế nào</h2>
+    <ol class="steps">
+      <li><b>Gọi hoặc nhắn Zalo</b><p>Cho tôi biết bạn bán gì, ở phường nào, doanh thu ước khoảng bao nhiêu.</p></li>
+      <li><b>Gặp trực tiếp tại cửa hàng</b><p>Tôi xem cách bạn đang ghi chép, nói rõ bạn cần làm gì và báo giá.</p></li>
+      <li><b>Tôi lo giấy tờ</b><p>Ghi sổ, nhắc hạn, chuẩn bị tờ khai. Bạn kiểm tra và ký trước khi nộp.</p></li>
+      <li><b>Báo cáo định kỳ</b><p>Gửi qua Zalo tổng doanh thu và số thuế (nếu có) để bạn luôn nắm được.</p></li>
+    </ol>
+  </section>
+
+  <section class="sec faq" aria-labelledby="faqTitle">
+    <h2 id="faqTitle">Câu hỏi hay gặp</h2>
+    <details><summary>Doanh thu dưới 1 tỷ thì có phải làm gì không?</summary><p>Không phải nộp thuế GTGT và thuế TNCN, nhưng vẫn phải thông báo doanh thu thực tế của năm cho cơ quan thuế, hạn chậm nhất là ngày 31/01 năm sau. Bạn cũng nên ghi chép doanh thu hằng ngày để biết khi nào mình sắp vượt ngưỡng.</p></details>
+    <details><summary>Nếu giữa năm doanh thu vượt 1 tỷ thì sao?</summary><p>Từ quý có doanh thu cộng dồn vượt ngưỡng, hộ phải khai và nộp thuế theo quý. Trong vòng 30 ngày kể từ khi vượt 1 tỷ, hộ phải chuyển sang dùng hóa đơn điện tử. Đây là lúc dễ sót nhất, nên cần theo dõi doanh thu lũy kế hằng tháng.</p></details>
+    <details><summary>Tôi có phải đưa tiền thuế cho bạn nộp hộ không?</summary><p>Không. Bạn tự nộp qua tài khoản ngân hàng hoặc ứng dụng của cơ quan thuế. Tôi chỉ chuẩn bị giấy tờ, hướng dẫn và nhắc hạn.</p></details>
+    <details><summary>Thông tin cửa hàng của tôi có bị lộ không?</summary><p>Tôi chỉ dùng thông tin của bạn để làm hồ sơ thuế, không chia sẻ cho bên khác. Bạn có thể yêu cầu xóa dữ liệu khi ngừng dùng dịch vụ.</p></details>
+  </section>
+
+  <section class="contact" id="lienhe" aria-labelledby="contactTitle">
+    <h2 id="contactTitle">Liên hệ</h2>
+    <div class="rows" id="contactRows"></div>
+    <p id="hours"></p>
+    <a class="btn" style="background:var(--card);color:var(--brand);border-color:var(--card);align-self:flex-start" href="https://zalo.me/0356175200" target="_blank" rel="noopener">Nhắn Zalo ngay</a>
+  </section>
+
+  <div class="foot">
+    <p>Thông tin trên trang là tóm tắt chung, không thay thế văn bản pháp luật. Quy định có thể thay đổi; hãy đối chiếu với cơ quan thuế quản lý nơi bạn kinh doanh.</p>
+    <p>Căn cứ: <a href="https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-dinh-so-141-2026-nd-cp-nang-nguong-doanh-thu-khong-phai-chiu-thue-len-1-ty-dong-119260504154326455.htm" target="_blank" rel="noopener">Nghị định 141/2026/NĐ-CP (toàn văn, Cổng thông tin Chính phủ)</a> · <a href="https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx" target="_blank" rel="noopener">Nghị định 68/2026/NĐ-CP (Thư viện Pháp luật)</a></p>
+  </div>
+</div>
+
+<script>
+(()=>{
+/* ====== THÔNG TIN CỦA BẠN: điền vào đây ====== */
+const CFG={
+  ten:"Phạm Quang Vinh",
+  sdt:"0356 175 200",                 // ví dụ: "0909 123 456"
+  zalo:"0356 175 200",
+  gio:"Thứ Hai – Thứ Bảy, 8:00 – 20:00",
+  phuong:["Trấn Biên","Biên Hòa","Tam Hiệp","Long Bình","Hố Nai","Trảng Dài","Long Hưng","Tân Triều","Phước Tân","Tam Phước"],
+  gia:{theodoi:"",quy:"",hoadon:"",moi:""}  // ví dụ: "150.000đ/tháng"
+};
+/* ============================================= */
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const val=(v,ph)=>v?esc(v):`<span class="fill">${ph}</span>`;
+document.getElementById("areaLine").textContent="Biên Hòa · Đồng Nai · Nhận làm tại cửa hàng";
+
+const PLANS=[
+ {id:"theodoi",for:"Doanh thu dưới 1 tỷ/năm",t:"Theo dõi doanh thu",li:["Lập sổ ghi doanh thu đơn giản trên điện thoại","Nhắc khi doanh thu cộng dồn tới gần 1 tỷ","Làm thông báo doanh thu năm, hạn 31/01"]},
+ {id:"quy",for:"Doanh thu trên 1 tỷ/năm",t:"Khai thuế theo quý",li:["Ghi sổ, đối chiếu doanh thu hằng tháng","Chuẩn bị tờ khai thuế GTGT, TNCN mỗi quý","Nhắc hạn nộp, gửi báo cáo qua Zalo"]},
+ {id:"hoadon",for:"Sắp hoặc đã vượt 1 tỷ",t:"Cài hóa đơn điện tử",li:["Tư vấn chọn hóa đơn có mã hoặc máy tính tiền","Đăng ký, cài đặt, hướng dẫn xuất hóa đơn","Hỗ trợ trong 30 ngày phải chuyển đổi"]},
+ {id:"moi",for:"Mới mở cửa hàng",t:"Bắt đầu đúng từ đầu",li:["Hướng dẫn đăng ký hộ kinh doanh","Thiết lập cách ghi chép ngay từ ngày đầu","Giải thích nghĩa vụ theo ngành nghề"]},
+];
+document.getElementById("plans").innerHTML=PLANS.map(p=>`<article class="plan"><span class="for">${p.for}</span><h3>${p.t}</h3><ul>${p.li.map(x=>`<li>${x}</li>`).join("")}</ul><p class="price">Giá: ${CFG.gia[p.id]?`<b>${esc(CFG.gia[p.id])}</b>`:"báo sau khi xem sổ"}</p></article>`).join("");
+
+const rows=[{l:"Người phụ trách",v:val(CFG.ten,"Tên của bạn"),copy:null},{l:"Điện thoại",v:val(CFG.sdt,"Số điện thoại"),copy:CFG.sdt},{l:"Zalo",v:val(CFG.zalo||CFG.sdt,"Số Zalo"),copy:CFG.zalo||CFG.sdt}];
+document.getElementById("contactRows").innerHTML=rows.map((r,i)=>`<div class="row"><span>${r.l}</span><b id="c${i}">${r.v}</b>${r.copy?`<button data-copy="${esc(r.copy)}" data-i="${i}">Sao chép số</button>`:""}</div>`).join("");
+document.getElementById("hours").textContent=`${CFG.gio}. Nhận làm tại các phường ${CFG.phuong.join(", ")}.`;
+document.getElementById("contactRows").addEventListener("click",e=>{const b=e.target.closest("button[data-copy]");if(!b)return;
+  navigator.clipboard.writeText(b.dataset.copy).then(()=>{b.textContent="Đã sao chép"},()=>{const r=document.createRange();r.selectNodeContents(document.getElementById("c"+b.dataset.i));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Đã chọn số, nhấn giữ để sao chép"})});
+
+/* kiểm tra nghĩa vụ theo doanh thu (triệu đồng) */
+const rev=document.getElementById("rev"),out=document.getElementById("result"),ro=document.getElementById("readout");
+const fmt=m=>m>=1000?`${(m/1000).toLocaleString("vi-VN",{maximumFractionDigits:2})} tỷ`:`${m} triệu`;
+function show(){const m=+rev.value;ro.innerHTML=`Doanh thu cả năm: <b>${fmt(m)}</b>`;
+  if(m<=1000){out.className="result ok";out.innerHTML=`<h3>Không phải nộp thuế GTGT và thuế TNCN</h3><ul>
+    <li>Vẫn phải <b>thông báo doanh thu thực tế</b> của năm cho cơ quan thuế, hạn chậm nhất <b>31/01 năm sau</b>.</li>
+    <li>Không bắt buộc dùng hóa đơn điện tử, nhưng được đăng ký nếu muốn.</li>
+    ${m>=800?`<li><b>Bạn đang gần ngưỡng 1 tỷ.</b> Nên theo dõi doanh thu cộng dồn hằng tháng để không bị sót khi vượt.</li>`:`<li>Nên ghi doanh thu hằng ngày để có số liệu thông báo và biết khi nào sắp chạm 1 tỷ.</li>`}</ul>`}
+  else{out.className="result due";out.innerHTML=`<h3>Phải khai và nộp thuế theo quý</h3><ul>
+    <li>Nộp thuế GTGT và TNCN theo <b>tỷ lệ trên doanh thu</b>, tỷ lệ tùy ngành nghề.</li>
+    <li>Khai theo quý, bắt đầu từ quý doanh thu cộng dồn vượt 1 tỷ.</li>
+    <li>Bắt buộc dùng <b>hóa đơn điện tử</b> (có mã của cơ quan thuế hoặc từ máy tính tiền), chuyển đổi trong 30 ngày kể từ khi vượt ngưỡng.</li>
+    ${m>=3000?`<li>Doanh thu từ 3 tỷ trở lên có thêm quy định riêng; nên được tư vấn trực tiếp.</li>`:""}</ul>`}}
+rev.addEventListener("input",show);show();
+})();
+</script>
+<div class="dock"><span>Vinh · <span class="ph">0356 175 200</span></span><a class="btn" href="https://zalo.me/0356175200" target="_blank" rel="noopener" style="padding:8px 14px">Nhắn Zalo</a></div>
+
+
+</body></html>
